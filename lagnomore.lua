@@ -12,7 +12,6 @@
     --local char = player.Character or player.CharacterAdded:Wait()
     local honeycomb = player:FindFirstChild("Honeycomb") or nil
     local options = getgenv().settings
-	getgenv() = nil
     --local connections = {}
     local l = game.Lighting
     local t = workspace.Terrain
