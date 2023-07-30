@@ -26,7 +26,6 @@
  
     }]]
     --local Debris = game:GetService("Debris")
-    settings().Rendering.QualityLevel = "Level01"
  
     local function onPlayerAdded(p, meta)
         local warning = p == player and "You are processed" or ((not meta) and (p.Name.." Joined")) or p.Name.."is processsed"
