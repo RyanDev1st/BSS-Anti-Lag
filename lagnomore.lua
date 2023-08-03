@@ -478,18 +478,19 @@ end)
     end
  
 local MAX_FPS = 360
-local MIN_FPS = 30
+--local MIN_FPS = 30
+setfpscap(MAX_FPS)
 local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
 
 UserInputService.WindowFocused:Connect(function()
    RunService:Set3dRenderingEnabled(true)
-   setfpscap(MAX_FPS)
+   --setfpscap(MAX_FPS)
 end)
 
 UserInputService.WindowFocusReleased:Connect(function()
    RunService:Set3dRenderingEnabled(false)
-   setfpscap(MIN_FPS)
+   --setfpscap(MIN_FPS)
 end)
 
     time1 =  os.clock()-time1-0.5
