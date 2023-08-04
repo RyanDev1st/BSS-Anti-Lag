@@ -59,10 +59,10 @@
 						pcall(function()
 							v.Enabled = false
 						end)
-                        v:Destroy()
+                        --v:Destroy()
                     elseif v:IsA("Fire") or v:IsA("Smoke") or v:IsA("Sparkles") then
                     	v.Enabled = false
-                        v:Destroy()
+                        --v:Destroy()
                     elseif v:IsA("SurfaceGui") then
                        v.Active = false
                        v.Enabled = false
@@ -87,7 +87,7 @@
                                 if v:FindFirstAncestorWhichIsA("Accessory") or v:FindFirstAncestorWhichIsA("Tool") then
                     				v.Transparency = 1
                                     v.CanCollide = false
-                                    v:Destroy()
+                                    --v:Destroy()
                                 end
                             end
                             if v:IsA("MeshPart") then
@@ -151,7 +151,7 @@
                     v.CanCollide = false
             		v.CanQuery = false
             		v.CanTouch = false
-                    v:Destroy()
+                    --v:Destroy()
                 elseif v:FindFirstAncestor("Shops") or v:FindFirstAncestor("Buildings") then 
                     --[[if not v:FindFirstAncestorWhichIsA("Tool") and not v:FindFirstAncestorWhichIsA("Accessory") then
                         v:Destroy() 
@@ -181,7 +181,7 @@
 						pcall(function()
 							v.Enabled = false
 						end)
-                v:Destroy()
+                --v:Destroy()
 				continue end;
                 v.Transparency = (not v:FindFirstAncestor("C") or v:FindFirstAncestor(workspace.Name)) and 1
                 pcall(function()
