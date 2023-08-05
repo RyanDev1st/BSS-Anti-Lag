@@ -59,10 +59,10 @@
 						pcall(function()
 							v.Enabled = false
 						end)
-                        --v:Destroy()
+                        v:Destroy()
                     elseif v:IsA("Fire") or v:IsA("Smoke") or v:IsA("Sparkles") then
                     	v.Enabled = false
-                        --v:Destroy()
+                	v:Destroy()
                     elseif v:IsA("SurfaceGui") then
                        v.Active = false
                        v.Enabled = false
@@ -87,7 +87,7 @@
                                 if v:FindFirstAncestorWhichIsA("Accessory") or v:FindFirstAncestorWhichIsA("Tool") then
                     				v.Transparency = 1
                                     v.CanCollide = false
-                                    --v:Destroy()
+                                    v:Destroy()
                                 end
                             end
                             if v:IsA("MeshPart") then
@@ -104,10 +104,10 @@
 						pcall(function()
 							v.Enabled = false
 						end)
-                        --v:Destroy()
+                        v:Destroy()
                     elseif v:IsA("Fire") or v:IsA("Smoke") or v:IsA("Sparkles") then
             			v.Enabled = false
-                        --v:Destroy()
+                        v:Destroy()
                     elseif v:IsA("SurfaceGui") then
                        v.Active = false
                        v.Enabled = false
@@ -151,7 +151,7 @@
                     v.CanCollide = false
             		v.CanQuery = false
             		v.CanTouch = false
-                    --v:Destroy()
+                    v:Destroy()
                 elseif v:FindFirstAncestor("Shops") or v:FindFirstAncestor("Buildings") then 
                     --[[if not v:FindFirstAncestorWhichIsA("Tool") and not v:FindFirstAncestorWhichIsA("Accessory") then
                         v:Destroy() 
@@ -174,14 +174,14 @@
 				  		pcall(function()
 							v.Enabled = false
 						end) 
-						--v:Destroy() 
+						v:Destroy() 
 						continue;      
             elseif not v:FindFirstAncestor("C") and v:FindFirstAncestor(workspace.Name) then
             	v.Transparency = 1
 						pcall(function()
 							v.Enabled = false
 						end)
-                --v:Destroy()
+                v:Destroy()
 				continue end;
                 v.Transparency = (not v:FindFirstAncestor("C") or v:FindFirstAncestor(workspace.Name)) and 1
                 pcall(function()
@@ -210,12 +210,12 @@
 				v.Enabled = false
         elseif v:IsA("Tool") and v.Parent == workspace then
         	  v.Enabled = false
-              v:Destroy()
+              --v:Destroy()
         elseif v:IsA("Humanoid") and not game.Players:GetPlayerFromCharacter(v:FindFirstAncestorWhichIsA("Model")) and not v:FindFirstAncestor("Cubs") then
             v:Destroy()
         elseif v:FindFirstAncestor("HiveBalloons") then
                 if v:IsA("SpecialMesh") then
-                     v:Destroy()
+                     v.TextureID = 10385902758728957
                 elseif v:IsA("Beam") or v:IsA("RopeConstraint") then
                      v.Enabled = false
                 elseif string.match(string.lower(v.Name), "body") then
@@ -253,9 +253,9 @@
                         if v:IsA("MeshPart") then
                            v.TextureID = 10385902758728957
                         end
-                        --[[if #v:GetChildren() == 0 and options.beevisibility then
+                        if #v:GetChildren() == 0 and options.beevisibility then
                              v:Destroy()
-                        end]]
+                        end
                 elseif v:IsA("ParticleEmitter") or v:IsA("Trail") or v:IsA("Beam") then
                     v.Enabled = false
                     pcall(function()
@@ -269,9 +269,9 @@
                     end)
                 elseif v:IsA("Fire") or v:IsA("Smoke") or v:IsA("Sparkles") then
                 	v.Enabled = false
-                     --v:Destroy()
+                     v:Destroy()
                 end
-                RunService.RenderStepped:Wait()
+                task.wait()
             end
     end)
  
@@ -308,7 +308,7 @@ if not options.honeycomb then
               end
             elseif v:FindFirstAncestor("HiveBalloons") then
                 if v:IsA("SpecialMesh") then
-                     v:Destroy()
+                     v.TextureID = 10385902758728957
                 elseif v:IsA("Beam") or v:IsA("RopeConstraint") then
                      v.Enabled = false
                 elseif string.match(string.lower(v.Name), "body") then
@@ -395,7 +395,7 @@ end)
                            v.TextureID = 10385902758728957
                         end
         				if #v:GetChildren() == 0 and v.Name ~= "Platform" then
-                            v:Destroy()
+                            --v:Destroy()
                         end
                 elseif v:IsA("ParticleEmitter") or v:IsA("Trail") or v:IsA("Beam") then
                     v.Enabled = false
@@ -477,9 +477,9 @@ end)
         end
     end
  
-local MAX_FPS = 360
+---local MAX_FPS = 360
 --local MIN_FPS = 30
-setfpscap(MAX_FPS)
+setfpscap(360)
 local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
 
